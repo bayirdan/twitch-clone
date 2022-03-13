@@ -1,9 +1,22 @@
+import { ThemeProvider } from "styled-components";
+
+import { lightTheme, darkTheme } from "./assets/styles/Theme";
+import GlobalStyles from "./assets/styles/Global";
+
+import { useSelector } from "react-redux";
+
+import Home from "./views/Home";
+
 const App = () => {
+  const { darkStatus } = useSelector((state) => state.site);
+
   return (
-    <div className="app">
-      <h1>Twitch Clone</h1>
-      <h2>Hello Word</h2>
-    </div>
+    <ThemeProvider theme={darkStatus ? darkTheme : lightTheme}>
+      <GlobalStyles />
+      <div className="app">
+        <Home />
+      </div>
+    </ThemeProvider>
   );
 };
 
