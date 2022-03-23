@@ -5,7 +5,6 @@ import { setDarkMode } from "../../store/site";
 const DarkMode = () => {
   const { darkStatus } = useSelector((state) => state.site);
   const dispatch = useDispatch();
-  console.log(darkStatus);
 
   return (
     <StyledDarkMode>

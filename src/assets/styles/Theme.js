@@ -1,6 +1,6 @@
 export const lightTheme = {
   header: "#ffffff",
-  body: "#f7f7f8",
+  body: "#ffffff",
   color: "#9147ff",
   textColor: "#0e0e10",
   soft: "#777777",
@@ -10,7 +10,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  header: "#18181b",
+  header: "#0e0e10",
   body: "#0e0e10",
   color: "#9147ff",
   textColor: "#fcfaff",

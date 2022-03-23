@@ -15,17 +15,18 @@ export const StyledHeaderMobile = styled.header`
     padding: 0 20px;
     position: fixed;
     top: 0;
-    border-bottom: 1px solid ${(props) => props.theme.border};
+    z-index: 4;
 
     .profile-box {
       width: 30px;
       height: 30px;
-      background-color: dodgerblue;
+      background-color: deeppink;
       border-radius: 999px;
       display: flex;
       align-items: flex-end;
+      padding-bottom: 3px;
       justify-content: center;
-      font-size: 25px;
+      font-size: 24px;
       overflow: hidden;
       color: #fff;
       cursor: pointer;
@@ -56,35 +57,31 @@ export const StyledHeaderMobile = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 65px;
-    border-top: 1px solid ${(props) => props.theme.border};
+    height: 60px;
     background-color: ${(props) => props.theme.header};
+    z-index: 4;
 
     .item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-size: 28px;
+      font-size: 26px;
       color: ${(props) => props.theme.iconColor};
       cursor: pointer;
       transition: 0.3s;
 
-      &:hover {
-        color: ${(props) => props.theme.color};
-      }
-
-      &:active {
-        color: ${(props) => props.theme.color};
-      }
-
       span {
         font-size: 12px;
-        margin-top: 8px;
+        margin-top: 5px;
       }
 
       .item__browse {
         transform: rotateY(180deg);
       }
+    }
+
+    .active {
+      color: ${(props) => props.theme.color};
     }
   }
 

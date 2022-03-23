@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledProfileMenu = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -22,6 +22,7 @@ export const StyledProfileMenu = styled.div`
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    z-index: 10;
 
     .title {
       position: sticky;
@@ -79,7 +80,8 @@ export const StyledProfileMenu = styled.div`
           align-items: flex-end;
           justify-content: center;
           color: #fff;
-          font-size: 30px;
+          font-size: 28px;
+          padding-bottom: 4px;
           cursor: pointer;
         }
 

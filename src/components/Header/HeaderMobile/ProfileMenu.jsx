@@ -1,18 +1,15 @@
+// React icons
+import { AiOutlineStar, AiOutlineRight, AiOutlineEye } from "react-icons/ai";
+import { BiUser, BiUserVoice } from "react-icons/bi";
+import { BsBroadcast, BsInbox } from "react-icons/bs";
+import { FiUsers } from "react-icons/fi";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { RiSettings2Line } from "react-icons/ri";
+
+// Styled
 import { StyledProfileMenu } from "./ProfileMenu.styled";
 
-import {
-  BiUser,
-  BsBroadcast,
-  AiOutlineStar,
-  AiOutlineRight,
-  BsInbox,
-  FiUsers,
-  RiSettings2Line,
-  MdOutlineDarkMode,
-  BiUserVoice,
-  AiOutlineEye,
-} from "react-icons/all";
-
+// Components
 import DarkMode from "../../Share/DarkMode";
 
 const ProfileMenu = ({ handleCloseProfileMenu }) => {
