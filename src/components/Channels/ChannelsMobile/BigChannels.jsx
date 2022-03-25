@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 // Helper
-import { mobileSlide } from "../../helper/helper";
+import { mobileSlide } from "../../../helper/helper";
 
 import { StyledBigChannels } from "./BigChannel.styled";
 import BigChannel from "./BigChannel";

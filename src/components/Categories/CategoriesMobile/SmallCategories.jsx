@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { mobileSlide } from "../../helper/helper";
+import { mobileSlide } from "../../../helper/helper";
 import { useSelector } from "react-redux";
 
 import { StyledSmallCategories } from "./SmallCategory.styled";
