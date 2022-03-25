@@ -6,10 +6,15 @@ export const StyledHome = styled.div`
 
     .home-box {
       padding: 55px 10px;
+      background-color: ${(props) => props.theme.header};
       color: ${(props) => props.theme.textColor};
       position: relative;
       z-index: 3;
       animation: pageAnim 0.3s ease-in-out;
+
+      h1 {
+        background-color: ${(props) => props.theme.header};
+      }
 
       h3 {
         font-size: 18px;
@@ -17,7 +22,7 @@ export const StyledHome = styled.div`
         position: sticky;
         top: 50px;
         padding: 8px 0;
-        background-color: ${(props) => props.theme.body};
+        background-color: ${(props) => props.theme.header};
       }
     }
 
@@ -33,6 +38,7 @@ export const StyledDiscover = styled.div`
 
     .discover-box {
       padding: 55px 10px;
+      background-color: ${(props) => props.theme.header};
       color: ${(props) => props.theme.textColor};
       position: relative;
       z-index: 3;
@@ -65,7 +71,7 @@ export const StyledDiscover = styled.div`
         font-size: 18px;
         width: 100%;
         padding: 8px 0;
-        background-color: ${(props) => props.theme.body};
+        background-color: ${(props) => props.theme.header};
         position: sticky;
         top: 50px;
 
@@ -89,6 +95,7 @@ export const StyledBrowse = styled.div`
     .browse-box {
       padding: 55px 10px;
       color: ${(props) => props.theme.textColor};
+      background-color: ${(props) => props.theme.header};
       position: relative;
       z-index: 3;
       animation: pageAnim 0.3s ease-in-out;
