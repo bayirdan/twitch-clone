@@ -7,7 +7,7 @@ const OfflineChannels = () => {
     <>
       {users.map((user, index) => {
         if (index < 3) {
-          return <OfflineChannel key={index} user={user} />;
+          return <OfflineChannel key={index} user={user} imageId={index} />;
         }
       })}
     </>

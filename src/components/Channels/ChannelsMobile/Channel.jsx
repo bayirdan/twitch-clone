@@ -1,7 +1,7 @@
 import { StyledChannel } from "./Channel.styled";
 import { FaCircle } from "react-icons/fa";
 
-const Channel = ({ user }) => {
+const Channel = ({ user, imageId }) => {
   return (
     <StyledChannel>
       <div className="channel-box">
@@ -14,7 +14,7 @@ const Channel = ({ user }) => {
         <div className="live-info">
           <div className="user">
             <div className="user-pp">
-              <img src={user.pp} alt="" />
+              <img src={`https://i.pravatar.cc/5${imageId}`} alt="" />
             </div>
             <div className="user-name">{user.username}</div>
           </div>

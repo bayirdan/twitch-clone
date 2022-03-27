@@ -7,14 +7,12 @@ import {
   IoMicOutline,
 } from "react-icons/io5";
 
-import HeaderMobile from "../components/Header/HeaderMobile/HeaderMobile";
 import BigChannels from "../components/Channels/ChannelsMobile/BigChannels";
 import SmallCategories from "../components/Categories/CategoriesMobile/SmallCategories";
 
 const Discover = () => {
   return (
     <>
-      <HeaderMobile />
       <StyledDiscover>
         <div className="discover-mobile">
           <div className="discover-box">

@@ -4,13 +4,15 @@ export const StyledHeaderDesktop = styled.header`
   display: none;
 
   .header-box {
+    position: relative;
     width: 100%;
     display: block;
     height: 50px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 
     header {
-      background-color: ${(props) => props.theme.header};
+      background-color: ${(props) => props.theme.headerDesktop};
       color: ${(props) => props.theme.textColor};
       width: 100%;
       display: flex;
@@ -112,7 +114,7 @@ export const StyledHeaderDesktop = styled.header`
             border-bottom-left-radius: 5px;
 
             &:focus {
-              background-color: ${(props) => props.theme.header};
+              background-color: ${(props) => props.theme.headerDesktop};
               border: 2px solid ${(props) => props.theme.color};
             }
           }
@@ -162,12 +164,12 @@ export const StyledHeaderDesktop = styled.header`
                 }
 
                 &:hover {
-                  background-color: ${(props) => props.theme.border};
+                  background-color: ${(props) => props.theme.hover};
                 }
               }
 
               &:hover {
-                background-color: ${(props) => props.theme.border};
+                background-color: ${(props) => props.theme.hover};
               }
             }
           }
@@ -192,7 +194,7 @@ export const StyledHeaderDesktop = styled.header`
         &.bits {
           width: 95px;
           font-size: 17px;
-          background-color: #aaaaaa51;
+          background-color: ${(props) => props.theme.bits};
 
           span {
             display: block;

@@ -1,12 +1,12 @@
 import { StyledOfflineChannel } from "./OfflineChannel.styled";
 
-const OfflineChannel = ({ user }) => {
+const OfflineChannel = ({ user, imageId }) => {
   return (
     <StyledOfflineChannel>
       <div className="offline-box">
         <div className="left">
           <div className="pp">
-            <img src={user.pp} alt="" />
+            <img src={`https://i.pravatar.cc/5${imageId}`} alt="" />
           </div>
         </div>
         <div className="right">

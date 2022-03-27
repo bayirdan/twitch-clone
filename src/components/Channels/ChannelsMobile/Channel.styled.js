@@ -12,6 +12,7 @@ export const StyledChannel = styled.div`
     .live-screen {
       position: relative;
       width: 35%;
+      min-width: 150px !important;
       min-height: 50px;
       background-color: black;
       border-radius: 3px;
@@ -60,7 +61,7 @@ export const StyledChannel = styled.div`
       .title,
       .game {
         color: ${(props) => props.theme.soft};
-        font-size: 15px;
+        font-size: 14px;
       }
 
       .tags {

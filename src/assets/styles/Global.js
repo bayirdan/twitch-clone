@@ -15,6 +15,16 @@ a {
   color: ${(props) => props.theme.text};
 }
 
+.app {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: ${(props) => props.theme.bodyDesktop};
+  }
+}
+
 @keyframes pageAnim {
     0% {
       opacity: 0;

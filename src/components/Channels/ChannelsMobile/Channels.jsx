@@ -6,7 +6,7 @@ const Channels = () => {
   return (
     <>
       {users.map((user, index) => (
-        <Channel user={user} key={index} />
+        <Channel user={user} key={index} imageId={index} />
       ))}
     </>
   );

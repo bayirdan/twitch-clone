@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
+// Page HOME
 export const StyledHome = styled.div`
+  /* Home Mobile */
   .home-mobile {
     display: none;
 
@@ -30,8 +32,60 @@ export const StyledHome = styled.div`
       display: block;
     }
   }
+
+  /* Home Desktop */
+  .home-desktop {
+    display: none;
+
+    .home-box {
+      display: block;
+      padding: 15px 15px 15px 75px;
+
+      &.side-bar-open {
+        padding-left: 265px;
+      }
+
+      .show-more {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 50px 0;
+
+        span {
+          font-size: 13px;
+          padding: 5px 15px;
+          background-color: ${(props) => props.theme.bodyDesktop};
+          color: ${(props) => props.theme.color};
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .down-icon {
+            font-size: 20px;
+          }
+
+          &:hover {
+            background-color: ${(props) => props.theme.hover};
+          }
+        }
+      }
+
+      .show-more::before,
+      .show-more::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background-color: ${(props) => props.theme.hover};
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
 `;
 
+// Page DISCOVER
 export const StyledDiscover = styled.div`
   .discover-mobile {
     display: none;
@@ -88,6 +142,7 @@ export const StyledDiscover = styled.div`
   }
 `;
 
+// Page BROWSE
 export const StyledBrowse = styled.div`
   .browse-mobile {
     display: none;

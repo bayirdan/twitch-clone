@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
+import Header from "./components/Header/Header";
+
 import Home from "./views/Home";
 import Discover from "./views/Discover";
 import Browse from "./views/Browse";
@@ -17,6 +19,7 @@ const App = () => {
     <ThemeProvider theme={darkStatus ? darkTheme : lightTheme}>
       <GlobalStyles />
       <div className="app">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discover" element={<Discover />} />

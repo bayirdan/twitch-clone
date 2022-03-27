@@ -25,7 +25,7 @@ const BigChannels = ({ channel }) => {
         <div className="channels">
           {randomUser.map((user, index) => {
             if (index < 6) {
-              return <BigChannel user={user} key={index} />;
+              return <BigChannel user={user} key={index} imageId={index} />;
             }
           })}
         </div>

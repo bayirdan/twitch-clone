@@ -1,10 +1,40 @@
+import { StyledSideBar } from "./SideBar.styled";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setSideBarStatus } from "../../../store/site";
+
+import { BiArrowFromLeft } from "react-icons/bi";
+import { MdOutlineVideocam } from "react-icons/md";
+
+import SideBarList from "./SideBarList";
+
 const SideBar = () => {
+  const { sideBarStatus } = useSelector((state) => state.site);
+  const dispatch = useDispatch();
+
   return (
-    <>
-      <div className="sidebar-box">
-        <h1>SideBar</h1>
+    <StyledSideBar>
+      <div className={`sidebar-box ${sideBarStatus ? "side-open" : ""}`}>
+        <div className="list-title">
+          <h1>Followed Channels</h1>
+          <div
+            className="title-icon"
+            onClick={() => dispatch(setSideBarStatus(!sideBarStatus))}
+          >
+            <BiArrowFromLeft />
+          </div>
+        </div>
+        <SideBarList />
+
+        <div className="list-title">
+          <h1>Recommended Channels</h1>
+          <div className="title-icon camera">
+            <MdOutlineVideocam />
+          </div>
+        </div>
+        <SideBarList />
       </div>
-    </>
+    </StyledSideBar>
   );
 };
 

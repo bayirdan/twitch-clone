@@ -4,9 +4,9 @@ import { BsTwitch, BsSuitDiamondFill } from "react-icons/bs";
 import { FaEllipsisV } from "react-icons/fa";
 import { BiSearch, BiMessageAlt, BiArchive } from "react-icons/bi";
 import { CgCrown } from "react-icons/cg";
-import { ImDiamonds } from "react-icons/im";
 
 import ProfileDesktop from "./ProfileDesktop";
+import SideBar from "./SideBar";
 
 const HeaderDesktop = () => {
   return (
@@ -68,6 +68,9 @@ const HeaderDesktop = () => {
               <ProfileDesktop />
             </div>
           </header>
+        </div>
+        <div className="left-bar">
+          <SideBar />
         </div>
       </>
     </StyledHeaderDesktop>

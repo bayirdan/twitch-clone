@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import { FaEllipsisV } from "react-icons/fa";
 
-const BigChannel = ({ user }) => {
+const BigChannel = ({ user, imageId }) => {
   const { pathname } = useLocation();
 
   return (
@@ -21,7 +21,7 @@ const BigChannel = ({ user }) => {
         </div>
         <div className="live-info">
           <div className="pp">
-            <img src={user.pp} alt="" />
+            <img src={`https://i.pravatar.cc/5${imageId}`} alt="" />
           </div>
           <div className="titles">
             <div className="username-box">
