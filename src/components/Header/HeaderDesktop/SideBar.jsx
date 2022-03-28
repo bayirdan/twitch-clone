@@ -3,7 +3,7 @@ import { StyledSideBar } from "./SideBar.styled";
 import { useSelector, useDispatch } from "react-redux";
 import { setSideBarStatus } from "../../../store/site";
 
-import { BiArrowFromLeft } from "react-icons/bi";
+import { BiArrowFromLeft, BiHeart } from "react-icons/bi";
 import { MdOutlineVideocam } from "react-icons/md";
 
 import SideBarList from "./SideBarList";
@@ -23,12 +23,15 @@ const SideBar = () => {
           >
             <BiArrowFromLeft />
           </div>
+          <div className="followed">
+            <BiHeart />
+          </div>
         </div>
         <SideBarList />
 
         <div className="list-title">
           <h1>Recommended Channels</h1>
-          <div className="title-icon camera">
+          <div className="camera">
             <MdOutlineVideocam />
           </div>
         </div>

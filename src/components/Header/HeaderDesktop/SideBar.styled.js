@@ -36,6 +36,26 @@ export const StyledSideBar = styled.div`
         transition: 0.3s;
         cursor: pointer;
         color: ${(props) => props.theme.textColor};
+
+        @media (max-width: 1199px) {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      .followed,
+      .camera {
+        font-size: 20px;
+        display: flex;
+        margin-right: 8px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      @media (min-width: 1200px) {
+        .followed {
+          display: none;
+        }
       }
     }
 
@@ -57,10 +77,9 @@ export const StyledSideBar = styled.div`
           opacity: 1;
         }
 
-        .title-icon {
-          &.camera {
-            display: none;
-          }
+        .followed,
+        .camera {
+          display: none;
         }
       }
 
@@ -97,10 +116,9 @@ export const StyledSideBar = styled.div`
 
         .title-icon {
           transform: rotate(180deg);
-
-          &.camera {
-            display: none;
-          }
+        }
+        .camera {
+          display: none;
         }
       }
 
