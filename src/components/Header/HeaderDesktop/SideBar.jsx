@@ -8,13 +8,17 @@ import { MdOutlineVideocam } from "react-icons/md";
 
 import SideBarList from "./SideBarList";
 
-const SideBar = () => {
+const SideBar = ({ mySize }) => {
   const { sideBarStatus } = useSelector((state) => state.site);
   const dispatch = useDispatch();
 
   return (
     <StyledSideBar>
-      <div className={`sidebar-box ${sideBarStatus ? "side-open" : ""}`}>
+      <div
+        className={`sidebar-box ${
+          sideBarStatus && mySize > 1199 ? "side-open" : ""
+        }`}
+      >
         <div className="list-title">
           <h1>Followed Channels</h1>
           <div

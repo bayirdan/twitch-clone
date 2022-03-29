@@ -6,7 +6,6 @@ import ChannelDesktop from "./ChannelDesktop";
 
 const ChannelsDesktop = ({ channelTitle }) => {
   const { users } = useSelector((state) => state.user);
-  let randomUsers = [...users].sort(() => 0.5 - Math.random());
 
   return (
     <StyledChannelsDesktop>

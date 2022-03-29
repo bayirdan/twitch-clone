@@ -14,17 +14,41 @@ export const StyledHome = styled.div`
       z-index: 3;
       animation: pageAnim 0.3s ease-in-out;
 
-      h1 {
-        background-color: ${(props) => props.theme.header};
-      }
+      .categories {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 30px 0;
 
-      h3 {
+        .category-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 15px;
+          background-color: ${(props) => props.theme.color};
+          color: #fff;
+          border-radius: 5px;
+          font-weight: 600;
+          cursor: pointer;
+
+          .category-icon {
+            font-size: 24px;
+          }
+        }
+      }
+      .home-title {
         font-size: 18px;
         width: 100%;
-        position: sticky;
-        top: 50px;
         padding: 8px 0;
         background-color: ${(props) => props.theme.header};
+        position: sticky;
+        top: 50px;
+
+        span {
+          color: ${(props) => props.theme.color};
+          cursor: pointer;
+        }
       }
     }
 
@@ -39,7 +63,7 @@ export const StyledHome = styled.div`
 
     .home-box {
       display: block;
-      padding: 15px 15px 15px 75px;
+      padding: 55px 15px 55px 75px;
 
       &.side-bar-open {
         padding-left: 265px;
@@ -48,17 +72,19 @@ export const StyledHome = styled.div`
       .show-more {
         display: flex;
         align-items: center;
-        gap: 20px;
-        margin: 50px 0;
+        margin: 30px 0;
 
         span {
           font-size: 13px;
+          font-weight: 600;
           padding: 5px 15px;
+          margin: 0 10px;
           background-color: ${(props) => props.theme.bodyDesktop};
           color: ${(props) => props.theme.color};
           display: flex;
           align-items: center;
           cursor: pointer;
+          border-radius: 5px;
 
           .down-icon {
             font-size: 20px;
@@ -133,6 +159,39 @@ export const StyledDiscover = styled.div`
           color: ${(props) => props.theme.color};
           cursor: pointer;
         }
+      }
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+`;
+
+// Page FOLLOWING
+export const StyledFollowing = styled.div`
+  .follow-mobile {
+    display: none;
+
+    .follow-box {
+      padding: 55px 10px;
+      background-color: ${(props) => props.theme.header};
+      color: ${(props) => props.theme.textColor};
+      position: relative;
+      z-index: 3;
+      animation: pageAnim 0.3s ease-in-out;
+
+      h1 {
+        background-color: ${(props) => props.theme.header};
+      }
+
+      h3 {
+        font-size: 18px;
+        width: 100%;
+        position: sticky;
+        top: 50px;
+        padding: 8px 0;
+        background-color: ${(props) => props.theme.header};
       }
     }
 

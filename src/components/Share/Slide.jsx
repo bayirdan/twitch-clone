@@ -2,7 +2,8 @@ import { StyledSlide } from "./Slide.styled";
 
 import { useSelector } from "react-redux";
 
-import { GiSpeaker, GiPlayButton } from "react-icons/gi";
+import { GiPauseButton } from "react-icons/gi";
+import { HiVolumeUp } from "react-icons/hi";
 import { BiFullscreen } from "react-icons/bi";
 import { AiFillSetting, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
@@ -21,7 +22,23 @@ const Slide = () => {
             <img src={users[5].liveScreen} />
 
             <div className="one">
-              <img src={users[1].liveScreen} />
+              <div className="img">
+                <img src={users[1].liveScreen} />
+                <div className="screen-icons">
+                  <div className="left">
+                    <GiPauseButton className="icon-screen" />
+                    <HiVolumeUp className="icon-screen" />
+                  </div>
+                  <div className="right">
+                    <AiFillSetting className="icon-screen" />
+                    <BiFullscreen className="icon-screen" />
+                  </div>
+                </div>
+
+                <div className="screen-live">
+                  <span>live</span>
+                </div>
+              </div>
               <div className="info">
                 <div className="info-top">
                   <div className="profile">
@@ -41,24 +58,8 @@ const Slide = () => {
                 </div>
                 <div className="info-bottom">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,
-                  consequatur blanditiis consequuntur ipsa tempore dignissimos
-                  aperiam odit quibusdam hic vero?
+                  consequatur blanditiis consequuntur ipsa tempore
                 </div>
-              </div>
-
-              <div className="screen-icons">
-                <div className="left">
-                  <GiPlayButton className="icon-screen" />
-                  <GiSpeaker className="icon-screen" />
-                </div>
-                <div className="right">
-                  <AiFillSetting className="icon-screen" />
-                  <BiFullscreen className="icon-screen" />
-                </div>
-              </div>
-
-              <div className="screen-live">
-                <span>live</span>
               </div>
             </div>
           </div>

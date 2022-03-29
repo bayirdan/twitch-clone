@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const StyledHeaderDesktop = styled.header`
   display: none;
+  position: fixed;
+  top: 0px;
+  z-index: 20;
+  width: 100%;
 
   .header-box {
     position: relative;
@@ -36,6 +40,10 @@ export const StyledHeaderDesktop = styled.header`
             font-size: 15px;
             font-weight: 500;
 
+            .link {
+              color: ${(props) => props.theme.textColor};
+            }
+
             .item {
               height: 100%;
               display: flex;
@@ -66,10 +74,22 @@ export const StyledHeaderDesktop = styled.header`
                   border-bottom-right-radius: 8px;
                 }
               }
-            }
 
-            .item-border {
-              border-bottom: 2px solid transparent;
+              .item-icon {
+                width: 26px;
+                height: 26px;
+                padding: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.3s;
+                border-radius: 5px;
+
+                &:hover {
+                  background-color: ${(props) => props.theme.hover};
+                }
+              }
             }
 
             &:hover {
@@ -78,10 +98,16 @@ export const StyledHeaderDesktop = styled.header`
                   transform: translate(2px, -2px);
                 }
               }
-              .item-border {
-                border-bottom: 2px solid ${(props) => props.theme.color};
+              .link {
                 color: ${(props) => props.theme.color};
               }
+            }
+          }
+          .active {
+            border-bottom: 2px solid ${(props) => props.theme.color};
+
+            .link {
+              color: ${(props) => props.theme.color};
             }
           }
         }
@@ -210,6 +236,11 @@ export const StyledHeaderDesktop = styled.header`
       .left {
         ul li {
           font-size: 18px;
+
+          .item .item-icon {
+            width: 28px;
+            height: 28px;
+          }
         }
       }
     }

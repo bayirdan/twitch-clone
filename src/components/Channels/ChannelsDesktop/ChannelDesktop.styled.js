@@ -76,6 +76,26 @@ export const StyledChannelDesktop = styled.div`
       }
     }
   }
+  @media (max-width: 1679px) {
+    &:nth-last-child(1) {
+      display: none;
+    }
+  }
+  @media (max-width: 1439px) {
+    &:nth-last-child(2) {
+      display: none;
+    }
+  }
+  @media (max-width: 1279px) {
+    &:nth-last-child(3) {
+      display: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    &:nth-last-child(4) {
+      display: none;
+    }
+  }
 `;
 
 export const StyledChannelsDesktop = styled.div`

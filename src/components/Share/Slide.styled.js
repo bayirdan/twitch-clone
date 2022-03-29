@@ -17,15 +17,16 @@ export const StyledSlide = styled.div`
       z-index: 3;
 
       img {
-        width: 400px;
+        width: 380px;
         height: 240px;
         cursor: pointer;
         transition: 0.3s;
-        filter: blur(1px);
+        filter: blur(1px) brightness(0.7);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
         &:hover {
           transform: scale(1.03);
+          filter: blur(1px) brightness(1);
         }
       }
 
@@ -48,49 +49,54 @@ export const StyledSlide = styled.div`
           align-items: center;
           justify-content: center;
           z-index: 7;
-          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 
-          img {
-            width: 500px;
+          .img {
+            position: relative;
             height: 300px;
-            transition: 0.3s;
-            box-shadow: none;
-            filter: none;
 
-            &:hover {
-              transform: none;
+            img {
+              width: 500px;
+              height: 300px;
+              transition: 0.3s;
+              box-shadow: none;
+              filter: none;
+
+              &:hover {
+                transform: none;
+              }
             }
-          }
 
-          .screen-icons {
-            position: absolute;
-            bottom: 5px;
-            width: 100%;
-            padding: 0 10px;
-            color: #fff;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .icon-screen {
-              margin: 0 5px;
-              cursor: pointer;
-            }
-          }
-
-          .screen-live {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-
-            span {
-              background-color: red;
+            .screen-icons {
+              position: absolute;
+              bottom: 5px;
+              width: 100%;
+              padding: 0 10px;
               color: #fff;
-              padding: 3px 5px;
-              text-transform: uppercase;
-              border-radius: 5px;
-              font-size: 14px;
+              font-size: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .icon-screen {
+                margin: 0 5px;
+                cursor: pointer;
+              }
+            }
+
+            .screen-live {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+
+              span {
+                background-color: red;
+                color: #fff;
+                padding: 3px 5px;
+                text-transform: uppercase;
+                border-radius: 5px;
+                font-size: 14px;
+              }
             }
           }
 
@@ -112,6 +118,8 @@ export const StyledSlide = styled.div`
                     height: 40px;
                     border-radius: 999px;
                     cursor: pointer;
+                    filter: none;
+                    box-shadow: none;
                   }
                 }
 
@@ -192,5 +200,93 @@ export const StyledSlide = styled.div`
       right: 20px;
     }
     /* Slide Arrows */
+  }
+
+  @media (max-width: 1679px) {
+    .slide .three {
+      img {
+        width: 300px;
+      }
+
+      .two {
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1439px) {
+    .slide .three {
+      img {
+        width: 250px;
+      }
+
+      .two {
+        img {
+          width: 340px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1279px) {
+    .slide .three {
+      img {
+        width: 0;
+      }
+    }
+  }
+  @media (max-width: 1023px) {
+    .slide {
+      .three {
+        .two {
+          img {
+            width: 0;
+          }
+
+          .one {
+            .img img {
+              width: 460px;
+            }
+
+            .info {
+              width: 180px;
+            }
+          }
+        }
+      }
+
+      .arrow-left {
+        left: 5px;
+      }
+
+      .arrow-right {
+        right: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 833px) {
+    .slide {
+      .three {
+        .two {
+          .one {
+            .img img {
+              width: 420px;
+            }
+            .info {
+              width: 160px;
+            }
+          }
+        }
+      }
+
+      .arrow-left {
+        left: 0;
+      }
+
+      .arrow-right {
+        right: 0;
+      }
+    }
   }
 `;

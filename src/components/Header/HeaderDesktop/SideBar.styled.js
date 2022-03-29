@@ -51,6 +51,7 @@ export const StyledSideBar = styled.div`
         margin-right: 8px;
         transition: 0.3s;
         cursor: pointer;
+        color: ${(props) => props.theme.textColor};
       }
       @media (min-width: 1200px) {
         .followed {
@@ -102,44 +103,48 @@ export const StyledSideBar = styled.div`
         }
       }
     }
+  }
 
-    &.side-open {
-      width: 250px;
+  .side-open {
+    width: 250px;
 
-      .list-title {
-        display: flex;
+    .list-title {
+      display: flex;
 
-        h1 {
-          font-size: 13px;
-          opacity: 1;
-        }
+      h1 {
+        font-size: 13px;
+        opacity: 1;
+      }
 
-        .title-icon {
-          transform: rotate(180deg);
-        }
-        .camera {
-          display: none;
+      .title-icon {
+        transform: rotate(180deg);
+      }
+      .camera {
+        display: none;
+      }
+    }
+
+    .list {
+      .show-more span {
+        font-size: 13px;
+        opacity: 1;
+
+        &:hover {
+          text-decoration: underline;
         }
       }
 
-      .list {
-        .show-more span {
-          font-size: 13px;
-          opacity: 1;
+      ul li {
+        width: 250px;
 
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        ul li {
-          width: 250px;
-
-          .item .hover-section {
-            display: flex;
-          }
+        .item .hover-section {
+          display: flex;
         }
       }
+    }
+
+    @media (max-width: 1199px) {
+      display: none;
     }
   }
 `;

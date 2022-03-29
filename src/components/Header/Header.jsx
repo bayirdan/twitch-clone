@@ -1,11 +1,11 @@
 import HeaderDesktop from "./HeaderDesktop/HeaderDesktop";
 import HeaderMobile from "./HeaderMobile/HeaderMobile";
 
-const Header = () => {
+const Header = ({ mySize }) => {
   return (
     <div className="header">
       <HeaderMobile />
-      <HeaderDesktop />
+      <HeaderDesktop mySize={mySize} />
     </div>
   );
 };

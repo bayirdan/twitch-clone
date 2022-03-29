@@ -10,9 +10,6 @@ import BigChannel from "./BigChannel";
 const BigChannels = ({ channel }) => {
   const { users } = useSelector((state) => state.user);
 
-  // For random user
-  let randomUser = [...users].sort(() => 0.5 - Math.random());
-
   useEffect(() => {
     // Live's slide controll with mouse
     const liveSlide = document.querySelector(`#${channel}`);
@@ -23,7 +20,7 @@ const BigChannels = ({ channel }) => {
     <StyledBigChannels>
       <div className="channels-box" id={channel}>
         <div className="channels">
-          {randomUser.map((user, index) => {
+          {users.map((user, index) => {
             if (index < 6) {
               return <BigChannel user={user} key={index} imageId={index} />;
             }

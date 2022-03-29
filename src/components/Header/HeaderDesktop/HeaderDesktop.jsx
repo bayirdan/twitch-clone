@@ -1,14 +1,22 @@
 import { StyledHeaderDesktop } from "./HeaderDesktop.styled";
 
+//React
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+// React icons
 import { BsTwitch, BsSuitDiamondFill } from "react-icons/bs";
 import { FaEllipsisV } from "react-icons/fa";
 import { BiSearch, BiMessageAlt, BiArchive } from "react-icons/bi";
 import { CgCrown } from "react-icons/cg";
 
+// Components
 import ProfileDesktop from "./ProfileDesktop";
 import SideBar from "./SideBar";
 
-const HeaderDesktop = () => {
+const HeaderDesktop = ({ mySize }) => {
+  const { pathname } = useLocation();
+
   return (
     <StyledHeaderDesktop>
       <>
@@ -18,21 +26,27 @@ const HeaderDesktop = () => {
               <ul>
                 <li>
                   <div className="item">
-                    <div className="logo">
-                      <div className="logo-bg"></div>
-                      <BsTwitch />
-                    </div>
+                    <Link to="/">
+                      <div className="logo">
+                        <div className="logo-bg" />
+                        <BsTwitch />
+                      </div>
+                    </Link>
                   </div>
                 </li>
-                <li>
-                  <div className="item item-border">Following</div>
+                <li className={pathname === "/following" ? "active" : ""}>
+                  <Link to="/following" className="link">
+                    <div className="item">Following</div>
+                  </Link>
                 </li>
-                <li>
-                  <div className="item item-border">Browse</div>
+                <li className={pathname === "/browse" ? "active" : ""}>
+                  <Link to="/browse" className="link">
+                    <div className="item">Browse</div>
+                  </Link>
                 </li>
                 <li>
                   <div className="item">
-                    <FaEllipsisV />
+                    <FaEllipsisV className="item-icon" />
                   </div>
                 </li>
               </ul>
@@ -70,7 +84,7 @@ const HeaderDesktop = () => {
           </header>
         </div>
         <div className="left-bar">
-          <SideBar />
+          <SideBar mySize={mySize} />
         </div>
       </>
     </StyledHeaderDesktop>

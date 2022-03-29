@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-
 import { StyledHeaderMobile } from "./HeaderMobile.styled";
+
+// React
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -12,9 +13,9 @@ import {
   BiArchive,
   BiUser,
 } from "react-icons/bi";
-
 import { RiCompass3Line, RiFileCopyLine, RiHeartFill } from "react-icons/ri";
 
+// Components
 import SearchBar from "./SearchBar";
 import ProfileMenu from "./ProfileMenu";
 
@@ -49,14 +50,14 @@ const HeaderMobile = () => {
         </div>
       </header>
       <nav>
-        <Link to="/">
-          <div className={`item ${pathname === "/" ? "active" : ""}`}>
+        <Link to="/following">
+          <div className={`item ${pathname === "/following" ? "active" : ""}`}>
             <RiHeartFill />
             <span>Following</span>
           </div>
         </Link>
-        <Link to="/discover">
-          <div className={`item ${pathname === "/discover" ? "active" : ""}`}>
+        <Link to="/">
+          <div className={`item ${pathname === "/" ? "active" : ""}`}>
             <RiCompass3Line />
             <span>Discover</span>
           </div>
