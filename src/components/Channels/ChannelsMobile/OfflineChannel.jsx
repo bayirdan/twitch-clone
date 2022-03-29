@@ -11,9 +11,7 @@ const OfflineChannel = ({ user, imageId }) => {
         </div>
         <div className="right">
           <div className="username">{user.username}</div>
-          <div className="videos">
-            {Math.floor(Math.random() * 10) + 1 + " new videos"}
-          </div>
+          <div className="videos">7 new videos</div>
         </div>
       </div>
     </StyledOfflineChannel>
