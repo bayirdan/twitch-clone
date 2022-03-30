@@ -8,15 +8,81 @@ export const StyledChannelDesktop = styled.div`
     .live-screen {
       cursor: pointer;
       transition: 0.2s;
+      position: relative;
 
       img {
         transition: 0.2s;
       }
 
+      .live {
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        color: #fff;
+        background-color: red;
+        padding: 2px 4px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: 0.2s;
+      }
+      .viewers {
+        position: absolute;
+        bottom: 7%;
+        left: 5%;
+        padding: 2px 3px;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 0.2s;
+      }
+      .invisible {
+        display: none;
+      }
+
+      .video {
+        display: none;
+
+        .video-tag {
+          position: absolute;
+          padding: 2px 3px;
+          color: #fff;
+          font-size: 13px;
+          border-radius: 5px;
+          transition: 0.2s;
+        }
+        .top {
+          top: 7%;
+          left: 5%;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        .bottom {
+          position: absolute;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          bottom: 7%;
+          left: 5%;
+        }
+
+        .bottom-right {
+          bottom: 7%;
+          right: 5%;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        &.video-visible {
+          display: block;
+        }
+      }
+
       &:hover {
         background-color: ${(props) => props.theme.color};
 
-        img {
+        img,
+        .live,
+        .viewers,
+        .video > * {
           transform: translate(6px, -3px);
         }
       }
@@ -74,6 +140,10 @@ export const StyledChannelDesktop = styled.div`
           }
         }
       }
+
+      .right {
+        cursor: pointer;
+      }
     }
   }
   @media (max-width: 1679px) {
@@ -101,7 +171,7 @@ export const StyledChannelDesktop = styled.div`
 export const StyledChannelsDesktop = styled.div`
   .channels-box {
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
     color: ${(props) => props.theme.textColor};
 
     h1 {

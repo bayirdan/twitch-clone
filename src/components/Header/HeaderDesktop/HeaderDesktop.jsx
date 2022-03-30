@@ -34,12 +34,12 @@ const HeaderDesktop = ({ mySize }) => {
                     </Link>
                   </div>
                 </li>
-                <li className={pathname === "/following" ? "active" : ""}>
+                <li className={pathname.includes("following") ? "active" : ""}>
                   <Link to="/following" className="link">
                     <div className="item">Following</div>
                   </Link>
                 </li>
-                <li className={pathname === "/browse" ? "active" : ""}>
+                <li className={pathname.includes("browse") ? "active" : ""}>
                   <Link to="/browse" className="link">
                     <div className="item">Browse</div>
                   </Link>

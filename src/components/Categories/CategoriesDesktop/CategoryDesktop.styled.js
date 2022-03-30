@@ -104,6 +104,7 @@ export const StyledCategoryDesktop = styled.div`
 export const StyledCategoriesDesktop = styled.div`
   .categories-box {
     display: block;
+    margin-top: 30px;
 
     h1 {
       font-size: 18px;

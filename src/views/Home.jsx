@@ -1,8 +1,6 @@
-import { StyledHome } from "./ViewPage.styled";
+import { StyledHome } from "./Home.styled";
 
-import { useSelector } from "react-redux";
-
-import { BiChevronDown } from "react-icons/bi";
+//React icons
 import {
   IoGameControllerOutline,
   IoMusicalNotesOutline,
@@ -10,20 +8,18 @@ import {
   IoMicOutline,
 } from "react-icons/io5";
 
+// Mobile Components
 import BigChannels from "../components/Channels/ChannelsMobile/BigChannels";
 import SmallCategories from "../components/Categories/CategoriesMobile/SmallCategories";
-
-// BURAYA KADAR GERİ AL //
 
 // Desktop Components
 import Slide from "../components/Share/Slide";
 import ChannelsDesktop from "../components/Channels/ChannelsDesktop/ChannelsDesktop";
 import CategoriesDesktop from "../components/Categories/CategoriesDesktop/CategoriesDekstop";
 import Tags from "../components/Share/Tags";
+import ShowMore from "../components/Share/ShowMore";
 
-const Home = ({ mySize }) => {
-  const { sideBarStatus } = useSelector((state) => state.site);
-
+const Home = () => {
   return (
     <>
       <StyledHome>
@@ -85,58 +81,26 @@ const Home = ({ mySize }) => {
           </div>
         </div>
         <div className="home-desktop">
-          <div
-            className={`home-box ${
-              sideBarStatus && mySize > 1199 ? "side-bar-open" : ""
-            }`}
-          >
+          <div className="home-box">
             <Slide />
             <ChannelsDesktop channelTitle="Live channels we think you’ll like" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
-
-            <CategoriesDesktop />
-            <div className="show-more" />
+            <ShowMore title="Show more" />
+            <CategoriesDesktop
+              title="we think you’ll like"
+              boldTitle="Categories"
+            />
+            <ShowMore />
             <Tags />
             <ChannelsDesktop channelTitle="Recommended smaller communities" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
+            <ShowMore title="Show more" />
             <ChannelsDesktop channelTitle="All aboard the Hype Train!" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
+            <ShowMore title="Show more" />
             <ChannelsDesktop channelTitle="Women's History Month" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
+            <ShowMore title="Show more" />
             <ChannelsDesktop channelTitle="Recommended smaller communities" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
+            <ShowMore title="Show more" />
             <ChannelsDesktop channelTitle="All aboard the Hype Train!" />
-            <div className="show-more">
-              <span>
-                Show More
-                <BiChevronDown className="down-icon" />
-              </span>
-            </div>
+            <ShowMore title="Show more" />
             <ChannelsDesktop channelTitle="Women's History Month" />
           </div>
         </div>

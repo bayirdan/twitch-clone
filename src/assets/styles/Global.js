@@ -10,6 +10,14 @@ body {
   background: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
 
 a {
   color: ${(props) => props.theme.text};
@@ -18,6 +26,20 @@ a {
 .app {
   display: block;
 }
+
+@media (min-width: 768px) {
+  .app {
+    .main {
+      padding: 55px 15px 55px 75px;
+
+      &.sidebar-open {
+        padding-left: 265px;
+      }
+    }  
+  }
+}
+
+  
 
 @media (min-width: 768px) {
   body {

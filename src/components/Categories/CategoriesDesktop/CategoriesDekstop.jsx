@@ -4,14 +4,14 @@ import { useSelector } from "react-redux";
 
 import CategoryDesktop from "./CategoryDesktop";
 
-const CategoriesDesktop = () => {
+const CategoriesDesktop = ({ title, boldTitle }) => {
   const { games } = useSelector((state) => state.category);
 
   return (
     <StyledCategoriesDesktop>
       <div className="categories-box">
         <h1>
-          <span>Categories</span> we think you’ll like
+          <span>{boldTitle}</span> {title}
         </h1>
         <div className="list">
           {games.map((game, index) => {

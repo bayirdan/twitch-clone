@@ -12,13 +12,14 @@ export const StyledHeaderDesktop = styled.header`
     width: 100%;
     display: block;
     height: 50px;
+    background-color: ${(props) => props.theme.headerDesktop};
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     z-index: 10;
 
     header {
       background-color: ${(props) => props.theme.headerDesktop};
       color: ${(props) => props.theme.textColor};
-      width: 100%;
+      width: 100vw;
       display: flex;
       align-items: center;
       height: 100%;
@@ -203,7 +204,7 @@ export const StyledHeaderDesktop = styled.header`
       }
 
       .profile-desktop {
-        margin: 0 10px;
+        margin: 0 20px 0 10px;
       }
     }
   }
