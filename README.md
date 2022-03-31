@@ -19,7 +19,7 @@ You may also see any errors in the console.
 
 ---
 
-### View demo [here](bayirdan.github.io/twitch-react-styled/)
+### View demo [here](https://bayirdan.github.io/twitch-react-styled/)
 
 ---
 
