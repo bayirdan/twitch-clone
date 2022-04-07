@@ -60,6 +60,14 @@ export const StyledSideBar = styled.div`
       }
     }
 
+    .side-search {
+      display: none;
+      padding: 0 10px;
+      position: absolute;
+      bottom: 10px;
+      animation: pageAnim 1s;
+    }
+
     .list ul li {
       .item .hover-section {
         display: none;
@@ -81,6 +89,12 @@ export const StyledSideBar = styled.div`
         .followed,
         .camera {
           display: none;
+        }
+      }
+
+      @media (min-height: 800px) {
+        .side-search {
+          display: block;
         }
       }
 
@@ -121,6 +135,12 @@ export const StyledSideBar = styled.div`
       }
       .camera {
         display: none;
+      }
+    }
+
+    @media (min-height: 800px) {
+      .side-search {
+        display: block;
       }
     }
 

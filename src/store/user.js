@@ -10,7 +10,7 @@ export const user = createSlice({
         game: "Chess",
         tag: "Chatting",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-chees.jpg",
+        liveScreen: "./images/games/game-chees.jpg",
         viewers: "17.1K",
       },
       {
@@ -19,7 +19,7 @@ export const user = createSlice({
         game: "Dota 2",
         tag: "Turkish",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-dota.jpg",
+        liveScreen: "./images/games/game-dota.jpg",
         viewers: "395",
       },
       {
@@ -28,7 +28,7 @@ export const user = createSlice({
         game: "PUBG",
         tag: "English",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-pubg.jpg",
+        liveScreen: "./images/games/game-pubg.jpg",
         viewers: "5.4K",
       },
       {
@@ -37,7 +37,7 @@ export const user = createSlice({
         game: "Counter Strike",
         tag: "English",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-cs.jpg",
+        liveScreen: "./images/games/game-cs.jpg",
         viewers: "117",
       },
       {
@@ -46,7 +46,7 @@ export const user = createSlice({
         game: "Crypto",
         tag: "Chatting",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-crypto.jpg",
+        liveScreen: "./images/games/game-crypto.jpg",
         viewers: "88",
       },
       {
@@ -55,7 +55,7 @@ export const user = createSlice({
         game: "Escape From Tarkov",
         tag: "Turkish",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-eft.jpg",
+        liveScreen: "./images/games/game-eft.jpg",
         viewers: "733",
       },
       {
@@ -64,7 +64,7 @@ export const user = createSlice({
         game: "Mortal Kombat",
         tag: "English",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-mortal.jpg",
+        liveScreen: "./images/games/game-mortal.jpg",
         viewers: "231",
       },
       {
@@ -73,7 +73,7 @@ export const user = createSlice({
         game: "Elder Ring",
         tag: "English",
         pp: "https://i.pravatar.cc/",
-        liveScreen: "../images/games/game-elder.jpg",
+        liveScreen: "./images/games/game-elder.jpg",
         viewers: "3.7K",
       },
     ],

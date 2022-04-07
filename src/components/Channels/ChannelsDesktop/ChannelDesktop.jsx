@@ -3,7 +3,6 @@ import { StyledChannelDesktop } from "./ChannelDesktop.styled";
 import { FaEllipsisV } from "react-icons/fa";
 
 const ChannelDesktop = ({ user, imageId, video }) => {
-  console.log(user.liveScreen);
   return (
     <StyledChannelDesktop>
       <div className="channel-box">

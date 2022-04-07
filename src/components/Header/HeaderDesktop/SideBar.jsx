@@ -1,12 +1,16 @@
 import { StyledSideBar } from "./SideBar.styled";
 
+// React
 import { useSelector, useDispatch } from "react-redux";
 import { setSideBarStatus } from "../../../store/site";
 
+// React icons
 import { BiArrowFromLeft, BiHeart } from "react-icons/bi";
 import { MdOutlineVideocam } from "react-icons/md";
 
+// Components
 import SideBarList from "./SideBarList";
+import Search from "../../Share/Search";
 
 const SideBar = ({ mySize }) => {
   const { sideBarStatus } = useSelector((state) => state.site);
@@ -40,6 +44,9 @@ const SideBar = ({ mySize }) => {
           </div>
         </div>
         <SideBarList />
+        <div className="side-search">
+          <Search placeholder={"Search to Add Friends"} />
+        </div>
       </div>
     </StyledSideBar>
   );

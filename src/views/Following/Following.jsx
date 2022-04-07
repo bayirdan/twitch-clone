@@ -11,7 +11,7 @@ import MyLink from "../../components/Share/LinkItem";
 
 const Following = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   return (
     <>
       <StyledFollowing>

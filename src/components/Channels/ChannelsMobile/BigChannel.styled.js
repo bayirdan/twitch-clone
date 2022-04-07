@@ -33,8 +33,11 @@ export const StyledBigChannel = styled.div`
         }
       }
     }
-    .for-browse {
-      max-width: 100%;
+
+    @media (max-width: 767px) {
+      .for-browse {
+        max-width: 100%;
+      }
     }
 
     .live-info {

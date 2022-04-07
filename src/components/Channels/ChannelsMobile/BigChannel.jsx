@@ -12,7 +12,7 @@ const BigChannel = ({ user, imageId }) => {
       <div className="channel-box">
         <div
           className={`live-screen ${
-            pathname === "/browse" ? "for-browse" : ""
+            pathname.includes("browse") ? "for-browse" : ""
           }`}
         >
           <img src={user.liveScreen} alt="" />
